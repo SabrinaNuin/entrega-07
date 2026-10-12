@@ -1,0 +1,33 @@
+// ==========================================================================
+// Botones: variante propia del componente btn de Bootstrap
+// ==========================================================================
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.btn-acento {
+    --bs-btn-padding-x: #{$espacio-lg};
+    --bs-btn-padding-y: #{$espacio-sm};
+    --bs-btn-font-weight: #{$peso-semi};
+    --bs-btn-border-radius: #{$radio-borde};
+    --bs-btn-color: #{$color-primario};
+    --bs-btn-bg: #{$color-acento};
+    --bs-btn-border-color: #{$color-acento};
+    --bs-btn-hover-color: #{$color-superficie};
+    --bs-btn-hover-bg: #{$color-primario};
+    --bs-btn-hover-border-color: #{$color-primario};
+    --bs-btn-active-color: #{$color-superficie};
+    --bs-btn-active-bg: #{$color-secundario};
+    --bs-btn-active-border-color: #{$color-secundario};
+    --bs-btn-focus-shadow-rgb: #{canales-rgb($color-acento)};
+    transition: color $transicion-rapida, background-color $transicion-rapida, border-color $transicion-rapida, box-shadow $transicion-rapida, transform $transicion-rapida;
+
+    &:hover,
+    &:focus {
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(0) scale(0.97);
+    }
+}

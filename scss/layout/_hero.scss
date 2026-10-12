@@ -1,0 +1,30 @@
+// ==========================================================================
+// Presentación (hero)
+// ==========================================================================
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.hero {
+    @include flex-columna($espacio-lg);
+    align-items: center;
+    margin-bottom: $espacio-xl;
+    padding: $espacio-xl $espacio-lg;
+    background-color: $color-primario;
+    background-image: linear-gradient(135deg, $color-primario 0%, $color-secundario 100%);
+    color: $color-superficie;
+    text-align: center;
+
+    @media (min-width: $bp-tablet) {
+        padding: 3rem $espacio-lg;
+    }
+}
+
+.hero-title {
+    color: $color-superficie;
+}
+
+.hero-text {
+    max-width: 40rem;
+    font-size: 1.125rem;
+}

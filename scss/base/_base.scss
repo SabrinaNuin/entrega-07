@@ -1,0 +1,51 @@
+// ==========================================================================
+// Base: reset y estilos globales a etiquetas
+// ==========================================================================
+
+@use "../utilities/variables" as *;
+
+// Reset global
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Bootstrap vuelve a poner márgenes en estas etiquetas; se quitan otra vez
+// para que el espaciado siga dependiendo de gap y de las clases propias
+h1,
+h2,
+h3,
+p,
+ul,
+figure,
+address {
+    margin: 0;
+    padding: 0;
+}
+
+// Bootstrap usa estas variables en sus componentes: toman la paleta propia
+:root {
+    --bs-body-color: #{$color-texto};
+    --bs-body-bg: #{$color-fondo};
+}
+
+// Grilla maestra: una columna con tres áreas. La fila de main (1fr) toma el
+// alto libre, así el pie queda abajo aunque haya poco contenido
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    min-height: 100vh;
+    background-color: $color-fondo;
+    color: $color-texto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,43 @@
+// ==========================================================================
+// Variables
+// Todos los valores que se repiten en el sitio se definen una sola vez acá.
+// ==========================================================================
+
+// Paleta de colores
+$color-primario: #1f3a5f;    // Azul marino: encabezado, pie y títulos
+$color-secundario: #2a6f97;  // Azul medio: enlaces, etiquetas y degradado del hero
+$color-acento: #f2a541;      // Ámbar: botón, bordes y estados activos
+$color-fondo: #f4f6f9;       // Gris muy claro: fondo general
+$color-superficie: #ffffff;  // Blanco: tarjetas y texto sobre azul
+$color-texto: #1e2a35;       // Gris azulado oscuro: texto de lectura
+
+// Tipografía
+$fuente-titulos: 'Montserrat', sans-serif;
+$fuente-cuerpo: 'Open Sans', sans-serif;
+$peso-normal: 400;
+$peso-semi: 600;
+$peso-bold: 700;
+
+// Espaciado
+$espacio-2xs: 0.25rem;
+$espacio-xs: 0.5rem;
+$espacio-sm: 0.75rem;
+$espacio-md: 1rem;
+$espacio-lg: 1.5rem;
+$espacio-xl: 2.5rem;
+
+// Forma y profundidad
+$radio-borde: 8px;
+$sombra-base: 0 2px 6px rgba($color-primario, 0.12);
+$sombra-elevada: 0 10px 22px rgba($color-primario, 0.2);
+$sombra-presionada: 0 4px 10px rgba($color-primario, 0.16);
+$anillo-foco: 0 0 0 0.2rem rgba($color-acento, 0.6);
+
+// Medidas del layout
+$ancho-maximo: 60rem;
+$bp-tablet: 768px;
+$bp-escritorio: 1024px;
+
+// Transiciones
+$transicion-rapida: 0.2s ease;
+$transicion-media: 0.25s ease;

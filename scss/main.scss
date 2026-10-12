@@ -1,0 +1,30 @@
+// ==========================================================================
+// Mi Portafolio - Archivo maestro
+// Único punto de entrada: reúne todos los partials y genera css/style.css.
+// Compilar con:  npm run sass
+// ==========================================================================
+
+// 1. Utilidades: no generan CSS, solo ponen a disposición variables y mixins
+@use "utilities/variables";
+@use "utilities/mixins";
+
+// 2. Base: reset, etiquetas globales y tipografía
+@use "base/base";
+@use "base/tipografia";
+
+// 3. Layout: grandes bloques de la página
+@use "layout/header";
+@use "layout/nav";
+@use "layout/hero";
+@use "layout/main";
+@use "layout/footer";
+
+// 4. Componentes: piezas repetibles
+@use "components/buttons";
+@use "components/cards";
+@use "components/badges";
+@use "components/carousel";
+@use "components/accordion";
+@use "components/lists";
+@use "components/figures";
+@use "components/contact";

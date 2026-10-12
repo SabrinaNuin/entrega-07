@@ -1,0 +1,18 @@
+// ==========================================================================
+// Figuras: imagen con epígrafe
+// ==========================================================================
+
+@use "../utilities/variables" as *;
+
+.figure-img {
+    display: block;
+    margin-bottom: 0;
+    border-radius: $radio-borde;
+}
+
+.figure-caption {
+    margin-top: $espacio-xs;
+    color: inherit;
+    font-size: 0.9rem;
+    font-style: italic;
+}

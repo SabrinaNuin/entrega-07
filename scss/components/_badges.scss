@@ -1,0 +1,15 @@
+// ==========================================================================
+// Etiquetas de tecnologías (componente badge de Bootstrap)
+// ==========================================================================
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.tag-list {
+    @include lista-en-fila($espacio-xs);
+}
+
+.tag {
+    background-color: $color-secundario;
+    font-weight: $peso-semi;
+}

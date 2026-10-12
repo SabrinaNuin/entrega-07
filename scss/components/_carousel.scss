@@ -1,0 +1,56 @@
+// ==========================================================================
+// Galería (componente carousel de Bootstrap)
+// ==========================================================================
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.gallery {
+    overflow: hidden;
+    background-color: $color-primario;
+    border-radius: $radio-borde;
+    box-shadow: $sombra-base;
+
+    .carousel-caption {
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 2rem $espacio-md 2.25rem;
+        background-image: linear-gradient(180deg, rgba($color-primario, 0) 0%, rgba($color-primario, 0.92) 55%);
+
+        @media (min-width: $bp-tablet) {
+            padding: 3rem $espacio-lg 2.75rem;
+        }
+    }
+
+    .gallery-indicator {
+        background-color: $color-acento;
+        transition: opacity $transicion-rapida, transform $transicion-rapida;
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+            transform: scaleY(1.6);
+        }
+
+        &:active {
+            background-color: $color-superficie;
+        }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        &:focus-visible {
+            @include contorno-foco(-4px);
+        }
+
+        &:active {
+            opacity: 1;
+            background-color: rgba($color-primario, 0.35);
+        }
+    }
+}
+
+.gallery-title {
+    color: $color-superficie;
+}

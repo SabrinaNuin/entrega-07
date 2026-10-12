@@ -1,0 +1,62 @@
+// ==========================================================================
+// Navegación: personalización de la navbar de Bootstrap
+// ==========================================================================
+
+@use "../utilities/variables" as *;
+
+.site-nav {
+    // La navbar de Bootstrap se pinta con sus propias variables
+    --bs-navbar-padding-x: #{$espacio-sm};
+    --bs-navbar-padding-y: #{$espacio-sm};
+    --bs-navbar-color: #{$color-superficie};
+    --bs-navbar-hover-color: #{$color-acento};
+    --bs-navbar-active-color: #{$color-acento};
+    --bs-navbar-brand-color: #{$color-superficie};
+    --bs-navbar-brand-hover-color: #{$color-acento};
+    --bs-navbar-brand-font-size: 1.5rem;
+    --bs-navbar-toggler-border-color: #{rgba($color-superficie, 0.6)};
+
+    @media (min-width: $bp-tablet) {
+        --bs-navbar-padding-x: 1.25rem;
+    }
+
+    .navbar-brand {
+        font-family: $fuente-titulos;
+        font-weight: $peso-bold;
+        transition: color $transicion-rapida;
+    }
+
+    .navbar-nav {
+        gap: $espacio-2xs $espacio-md;
+        padding-top: $espacio-xs;
+
+        @media (min-width: $bp-tablet) {
+            padding-top: 0;
+        }
+    }
+
+    .nav-link {
+        display: inline-block;
+        border-bottom: 2px solid transparent;
+        transition: color $transicion-rapida, border-color $transicion-rapida;
+
+        &:hover,
+        &:focus {
+            border-bottom-color: $color-acento;
+        }
+
+        &:focus-visible {
+            box-shadow: $anillo-foco;
+        }
+
+        &:active {
+            color: $color-superficie;
+            border-bottom-color: $color-superficie;
+        }
+
+        // Página actual
+        &.active {
+            border-bottom-color: $color-acento;
+        }
+    }
+}

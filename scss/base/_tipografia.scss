@@ -1,0 +1,69 @@
+// ==========================================================================
+// Tipografía
+// ==========================================================================
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+body {
+    font-family: $fuente-cuerpo;
+    font-size: 1rem;
+    font-weight: $peso-normal;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $fuente-titulos;
+    color: $color-primario;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: $peso-bold;
+
+    @media (min-width: $bp-tablet) {
+        font-size: 2.5rem;
+    }
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: $peso-bold;
+
+    @media (min-width: $bp-tablet) {
+        font-size: 1.75rem;
+    }
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: $peso-semi;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: $peso-normal;
+}
+
+// Enlaces de texto y sus estados
+a {
+    color: $color-secundario;
+    font-weight: $peso-semi;
+    transition: color $transicion-rapida;
+
+    &:hover,
+    &:focus {
+        color: $color-primario;
+    }
+
+    &:active {
+        color: $color-texto;
+    }
+
+    &:focus-visible {
+        @include contorno-foco;
+    }
+}

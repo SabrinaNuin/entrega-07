@@ -1,0 +1,39 @@
+// ==========================================================================
+// Mixins y funciones
+// ==========================================================================
+
+@use "sass:color";
+@use "sass:string";
+@use "variables" as *;
+
+// Apila los hijos en columna y los separa con gap
+@mixin flex-columna($gap) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+// Lista en fila, sin viñetas, que baja de línea si no entra
+@mixin lista-en-fila($gap) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap;
+    list-style: none;
+}
+
+// Contorno de foco para la navegación con teclado
+@mixin contorno-foco($desplazamiento: 2px) {
+    outline: 2px solid $color-acento;
+    outline-offset: $desplazamiento;
+}
+
+// Devuelve los canales "R, G, B" de un color, como los pide Bootstrap
+@function canales-rgb($color) {
+    @return #{color.channel($color, "red", $space: rgb)}, #{color.channel($color, "green", $space: rgb)}, #{color.channel($color, "blue", $space: rgb)};
+}
+
+// Flecha del acordeón (SVG en línea) pintada con el color recibido
+@function icono-flecha($color) {
+    $hex: string.to-lower-case(string.slice(color.ie-hex-str($color), 4));
+    @return url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23#{$hex}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}

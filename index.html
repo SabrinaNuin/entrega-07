@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio personal de desarrollo web: presentación, proyectos, preguntas frecuentes y contacto.">
+    <title>Inicio | Mi Portafolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark site-nav" aria-label="Navegación principal">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Mi Portafolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu-principal">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/sobre-mi.html">Sobre mí</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/proyectos.html">Proyectos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/faq.html">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1 class="hero-title">Portafolio de desarrollo web</h1>
+            <p class="hero-text">
+                Soy desarrollador web en formación. Construyo sitios claros, accesibles
+                y adaptables a cualquier pantalla.
+            </p>
+            <figure>
+                <img class="figure-img" src="./img/portada.webp" alt="Escritorio con una computadora portátil" width="800" height="400">
+                <figcaption class="figure-caption">Mi espacio de trabajo, donde nacen los proyectos de este portafolio.</figcaption>
+            </figure>
+        </section>
+
+        <div class="wrapper home-grid">
+            <section class="section home-info">
+                <h2>Información general</h2>
+                <p>
+                    Este sitio reúne los trabajos que voy realizando a lo largo del curso de
+                    Programación Web. Vas a encontrar una presentación personal, el detalle de
+                    cada proyecto, respuestas a las preguntas más habituales y mis datos de contacto.
+                </p>
+            </section>
+
+            <section class="section home-tools">
+                <h2>Herramientas que uso</h2>
+                <ul class="list">
+                    <li>HTML5 semántico para estructurar el contenido.</li>
+                    <li>CSS3, Flexbox y Grid para el diseño.</li>
+                    <li>Bootstrap para acelerar la maquetación responsiva.</li>
+                    <li>Git y GitHub para versionar y publicar el código.</li>
+                </ul>
+            </section>
+
+            <section class="section home-gallery">
+                <h2>Galería de proyectos</h2>
+
+                <div id="galeria-proyectos" class="carousel slide gallery">
+                    <div class="carousel-indicators">
+                        <button class="gallery-indicator active" type="button" data-bs-target="#galeria-proyectos" data-bs-slide-to="0" aria-current="true" aria-label="Imagen 1: Tienda Online"></button>
+                        <button class="gallery-indicator" type="button" data-bs-target="#galeria-proyectos" data-bs-slide-to="1" aria-label="Imagen 2: Blog Personal"></button>
+                        <button class="gallery-indicator" type="button" data-bs-target="#galeria-proyectos" data-bs-slide-to="2" aria-label="Imagen 3: Landing Page"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <figure class="carousel-item active">
+                            <img class="d-block w-100" src="./img/galeria-tienda-online.webp" alt="Página de catálogo" width="1200" height="600">
+                            <figcaption class="carousel-caption">
+                                <h3 class="gallery-title">Tienda Online</h3>
+                                <p class="d-none d-md-block">Catálogo de productos con carrito de compras.</p>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="carousel-item">
+                            <img class="d-block w-100" src="./img/galeria-blog.webp" alt="Persona escribiendo un blog en su escritorio" width="1200" height="600">
+                            <figcaption class="carousel-caption">
+                                <h3 class="gallery-title">Blog Personal</h3>
+                                <p class="d-none d-md-block">Sitio de artículos con diseño adaptable a móviles.</p>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="carousel-item">
+                            <img class="d-block w-100" src="./img/galeria-disenio.webp" alt="Persona diseñando su landing page" width="1200" height="600">
+                            <figcaption class="carousel-caption">
+                                <h3 class="gallery-title">Landing Page</h3>
+                                <p class="d-none d-md-block">Página de presentación para un estudio de diseño.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#galeria-proyectos" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Imagen anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#galeria-proyectos" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Imagen siguiente</span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="section home-projects">
+                <h2>Proyectos destacados</h2>
+
+                <div class="card-list">
+                    <article class="card">
+                        <h3>Tienda Online</h3>
+                        <p>Catálogo de productos con carrito de compras.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Blog Personal</h3>
+                        <p>Sitio de artículos con diseño adaptable a móviles.</p>
+                    </article>
+                </div>
+
+                <p><a class="btn btn-acento" href="pages/proyectos.html">Ver todos los proyectos</a></p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p class="footer-copy">&copy; 2026 Mi Portafolio. Todos los derechos reservados.</p>
+        <ul class="social-list">
+            <li><a class="social-link" href="https://github.com/">GitHub</a></li>
+            <li><a class="social-link" href="https://www.linkedin.com/">LinkedIn</a></li>
+            <li><a class="social-link" href="https://www.instagram.com/">Instagram</a></li>
+        </ul>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+// ==========================================================================
+// Preguntas frecuentes (componente accordion de Bootstrap)
+// ==========================================================================
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.faq {
+    --bs-accordion-color: #{$color-texto};
+    --bs-accordion-bg: #{$color-superficie};
+    --bs-accordion-border-color: #{rgba($color-primario, 0.18)};
+    --bs-accordion-border-radius: #{$radio-borde};
+    --bs-accordion-inner-border-radius: #{$radio-borde - 1px};
+    --bs-accordion-btn-color: #{$color-primario};
+    --bs-accordion-btn-bg: #{$color-superficie};
+    --bs-accordion-active-color: #{$color-superficie};
+    --bs-accordion-active-bg: #{$color-primario};
+    --bs-accordion-btn-focus-box-shadow: #{$anillo-foco};
+    --bs-accordion-btn-icon: #{icono-flecha($color-primario)};
+    --bs-accordion-btn-active-icon: #{icono-flecha($color-superficie)};
+    box-shadow: $sombra-base;
+    border-radius: $radio-borde;
+
+    .accordion-button {
+        font-family: $fuente-titulos;
+        font-size: 1.0625rem;
+        font-weight: $peso-semi;
+
+        &.collapsed:hover,
+        &.collapsed:focus {
+            background-color: $color-fondo;
+            color: $color-secundario;
+        }
+
+        &:active {
+            background-color: $color-secundario;
+            color: $color-superficie;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+// ==========================================================================
+// Contenido principal: contenedores, secciones y grilla del inicio
+// ==========================================================================
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+main {
+    grid-area: main;
+}
+
+// Contenedor propio: ancho máximo centrado, con aire a los costados
+.wrapper {
+    max-width: $ancho-maximo;
+    margin: 0 auto $espacio-xl;
+    padding: 0 $espacio-lg;
+}
+
+// Cada sección apila sus hijos en columna; gap separa título, texto y tarjetas
+.section {
+    @include flex-columna(1.25rem);
+}
+
+// Grilla del inicio. En celular: una columna, un área debajo de la otra
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "info"
+        "tools"
+        "gallery"
+        "projects";
+    gap: $espacio-xl;
+
+    // Escritorio: 2 columnas
+    @media (min-width: $bp-escritorio) {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "info     tools"
+            "gallery  gallery"
+            "projects projects";
+    }
+}
+
+.home-info {
+    grid-area: info;
+}
+
+.home-tools {
+    grid-area: tools;
+}
+
+.home-gallery {
+    grid-area: gallery;
+    min-width: 0;
+}
+
+.home-projects {
+    grid-area: projects;
+}
